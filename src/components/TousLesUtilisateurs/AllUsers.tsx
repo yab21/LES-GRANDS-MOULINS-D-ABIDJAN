@@ -7,16 +7,16 @@ const AllUsers: React.FC = () => {
     <>
       <div className="mx-auto max-w-4xl pt-5">
         <div className="rounded-[10px] border-3 border-gray-100 bg-[#D94D08] shadow-2xl">
-          <div className="m-2 rounded-[10px] border-1 bg-[#211208] px-2 py-4 shadow-xl md:px-3">
+          <div className="m-2 rounded-[10px] border-1 border-orange-400 bg-[#211208] px-2 py-4 shadow-xl md:px-3">
             <h4 className="text-body-xlg flex items-center font-medium tracking-normal text-[#F65F13] subpixel-antialiased md:text-body-2xlg lg:tracking-wide">
               <Image
                 src="/images/logo/GMA-logo-nobg.png"
-                width={170}
-                height={70}
+                width={130}
+                height={60}
                 alt=""
               />
-              Tous les comptes de{" "}
-              <span className="font-bold"> LES GRANDS MOULINS D'ABIDJAN</span>
+              Tous les comptes du{" "}
+              <span className="ml-1 font-bold">GRANDS MOULINS D'ABIDJAN</span>
             </h4>
           </div>
 

@@ -2,8 +2,6 @@
 import React from "react";
 import ChatCard from "./Chat/ChatCard";
 import DataStatsOne from "@/components/DashboardClient/DataStats/DataStatsOne";
-import ChartEnCours from "@/components/DashboardClient/Charts/ChartEnCours";
-import ChartValide from "@/components/DashboardClient/Charts/ChartValide";
 import ChartLivraison from "@/components/DashboardClient/Charts/ChartLivraison";
 import ChartLivree from "@/components/DashboardClient/Charts/ChartLivree";
 
@@ -14,11 +12,6 @@ const ECommerce: React.FC = () => {
         Statistique des commandes
       </h4>
       <DataStatsOne />
-
-      <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-9 2xl:gap-7.5">
-        <ChartEnCours />
-        <ChartValide />
-      </div>
       <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-9 2xl:gap-7.5">
         <ChartLivraison />
         <ChartLivree />

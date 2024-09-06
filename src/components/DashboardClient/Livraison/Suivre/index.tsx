@@ -8,7 +8,7 @@ const Livraison = () => {
     <>
       <Breadcrumb pageName="Livraison" />
 
-      <div className="mt-5 w-full max-w-full rounded-[10px]">
+      <div className="mt-5 h-100 w-full max-w-full rounded-[10px]">
         <div className="mt-8 grid grid-cols-6 gap-8">
           <div className="col-span-6">
             <div className="rounded-[10px] border border-stroke bg-white shadow-1 dark:border-dark-3 dark:bg-gray-dark dark:shadow-card">

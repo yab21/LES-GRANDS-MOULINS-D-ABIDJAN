@@ -7,64 +7,12 @@ import Breadcrumb from "@/components/DashboardChefDeVente/Breadcrumbs/Breadcrumb
 import { Button } from "@nextui-org/button";
 import { image, Input } from "@nextui-org/react";
 import { Select, SelectItem } from "@nextui-org/react";
-import { documents } from "./data";
 
 const RapportDeLaVisite = () => {
   return (
     <>
       <Breadcrumb pageName="Rapport de la visite" />
       <div className="mt-5 w-full max-w-full rounded-[10px]">
-        <h2 className="text-[22px] font-bold leading-[30px] text-dark dark:text-white">
-          Générer un rapport
-        </h2>
-        <div className="mt-3 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-4">
-          <div>
-            <Input
-              type="date"
-              color="warning"
-              variant="underlined"
-              label="Date de début"
-              defaultValue="2024-08-10"
-              className="max-w-[220px] text-base font-medium"
-            />
-          </div>
-          <div>
-            <Input
-              type="date"
-              color="warning"
-              variant="underlined"
-              label="Date de fin"
-              defaultValue="2024-08-15"
-              className="max-w-[220px] text-base font-medium"
-            />
-          </div>
-          <div>
-            <Select
-              label="Type de document"
-              color="warning"
-              variant="underlined"
-              placeholder="Choisir le document"
-              selectionMode="multiple"
-              className="max-w-[220px] text-base font-medium"
-            >
-              {documents.map((document) => (
-                <SelectItem key={document.key}>{document.label}</SelectItem>
-              ))}
-            </Select>
-          </div>
-          <div>
-            <p className="text-sm font-medium">Générer</p>
-            <Button isIconOnly color="warning" aria-label="click">
-              <img
-                src="/images/icon/file-button.svg"
-                width={15}
-                height={15}
-                alt=""
-              />
-            </Button>
-          </div>
-        </div>
-
         <div className="mt-5 overflow-hidden rounded-[10px] bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
           <div className="relative z-20 h-35 md:h-65">
             <Image

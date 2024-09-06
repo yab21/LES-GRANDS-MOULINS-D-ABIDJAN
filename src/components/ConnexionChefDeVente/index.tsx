@@ -9,67 +9,7 @@ const ConnexionChefDeVente: React.FC = () => {
     <>
       <main className="flex w-full">
         <div className="relative hidden h-screen flex-1 items-center justify-center bg-gray-900 lg:flex">
-          <div className="relative z-10 w-full max-w-md">
-            <Image
-              src="/images/logo/GMA-logo-nobg.png"
-              width={150}
-              height={100}
-              alt=""
-            />
-            <div className=" mt-16 space-y-3">
-              <h3 className="text-3xl font-bold text-orange-400">
-                Slogan de LES GRANDS MOULINS D'ABIDJAN
-              </h3>
-              <div className="flex items-center -space-x-2 overflow-hidden">
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/team/avatar.jpg"
-                  className="rounded-full border-2 border-white"
-                  alt=""
-                />
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/team/avatar.jpg"
-                  className="rounded-full border-2 border-white"
-                  alt=""
-                />
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/team/avatar.jpg"
-                  className="rounded-full border-2 border-white"
-                  alt=""
-                />
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/team/avatar.jpg"
-                  className="rounded-full border-2 border-white"
-                  alt=""
-                />
-                <Image
-                  width={40}
-                  height={40}
-                  src="/images/team/avatar.jpg"
-                  className="rounded-full border-2 border-white"
-                  alt=""
-                />
-                <p className="translate-x-5 text-sm font-medium text-gray-400">
-                  4 autres utilisateurs
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className="absolute inset-0 my-auto h-[500px]"
-            style={{
-              background:
-                "linear-gradient(152.92deg, rgba(255, 155, 112, 0.2) 4.54%, rgba(255, 112, 51, 0.26) 34.2%, rgba(255, 155, 112, 0.1) 77.55%)",
-              filter: "blur(88px)",
-            }}
-          ></div>
+          <div className="absolute inset-0 my-auto h-screen bg-[url('/images/logo/Image-de-connexion-GMA.svg')] bg-cover bg-center bg-no-repeat"></div>
         </div>
         <div className="flex h-screen flex-1 items-center justify-center">
           <div className="w-full max-w-2xl space-y-8 px-3 text-gray-600 md:px-6">

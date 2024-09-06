@@ -61,9 +61,9 @@ const Header = (props: {
             href="/dashboardchefdevente"
           >
             <Image
-              width={32}
-              height={32}
-              src={"/images/logo/GMA-logo.jpg"}
+              width={55}
+              height={55}
+              src={"/images/logo/logo-dark.svg"}
               alt="Logo"
             />
           </Link>

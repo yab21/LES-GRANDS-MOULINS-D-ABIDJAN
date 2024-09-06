@@ -26,7 +26,6 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 value="2024-08-16"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
@@ -35,7 +34,6 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 placeholder="Entrer votre nom"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
@@ -44,7 +42,6 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 placeholder="Entrer votre prénom"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
@@ -53,7 +50,6 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 placeholder="Entrer le contact 1"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
@@ -62,7 +58,6 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 value="2024-08-16"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
@@ -71,7 +66,6 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 placeholder="Entrer votre adresse email"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
@@ -80,7 +74,6 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 placeholder="Entrer le contact 2"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
@@ -89,17 +82,15 @@ const AjouterClient = () => {
                 variant="bordered"
                 color="warning"
                 placeholder="Entrer Votre adresse"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
               <Input
                 isReadOnly
                 type="text"
-                label="Mot de passe"
+                label="ID client"
                 variant="bordered"
                 color="warning"
                 defaultValue="MCT45RH3"
-                // defaultValue="Entrer votre nom de famille"
                 className="text-sm font-medium md:text-base"
               />
             </div>

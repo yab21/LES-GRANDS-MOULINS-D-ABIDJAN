@@ -228,7 +228,7 @@ const CreerDevis = () => {
             </div>
           </div>
           <div className="w-full max-w-full p-2">
-            <div className="grid grid-cols-1 place-content-center gap-2 px-4 md:grid-cols-2 md:px-8">
+            <div className="grid grid-cols-1 place-content-center gap-2 px-4 md:px-8">
               <div className="col-span-1 py-4">
                 <Input
                   isReadOnly
@@ -241,20 +241,8 @@ const CreerDevis = () => {
                   className="mb-3 text-sm font-medium md:text-xl"
                 />
               </div>
-              <div className="col-span-1 py-4">
-                <Input
-                  isReadOnly
-                  type="text"
-                  label="TVA (20,00%)"
-                  variant="flat"
-                  color="default"
-                  labelPlacement="outside-left"
-                  defaultValue="2200 XOF"
-                  className="mt-3 text-sm font-medium md:text-xl"
-                />
-              </div>
             </div>
-            <div className="mt-4 w-full bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
+            <div className="mt-4 flex w-full flex-col justify-center bg-white shadow-1 dark:bg-gray-dark dark:shadow-card">
               <Table>
                 <TableHeader>
                   <TableColumn>Nom du produit</TableColumn>
@@ -269,6 +257,18 @@ const CreerDevis = () => {
                   </TableRow>
                 </TableBody>
               </Table>
+            </div>
+            <div className="flex py-4">
+              <Input
+                isReadOnly
+                type="text"
+                label="TVA (18%)"
+                variant="flat"
+                color="default"
+                labelPlacement="outside-left"
+                defaultValue="2200 XOF"
+                className="mt-3 justify-normal text-sm font-medium md:justify-end md:text-xl"
+              />
             </div>
           </div>
         </div>
