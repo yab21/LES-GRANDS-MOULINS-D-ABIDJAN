@@ -182,7 +182,7 @@ const RapportDesVentes = () => {
                 {(onClose) => (
                   <>
                     <ModalHeader className="flex flex-col gap-1">
-                      Rapport des vente journalière
+                      Rapport des ventes journalières
                     </ModalHeader>
                     <ModalBody>
                       <div className="w-full overflow-x-auto">

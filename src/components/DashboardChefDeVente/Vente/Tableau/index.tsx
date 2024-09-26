@@ -1,7 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import Breadcrumb from "@/components/DashboardChefDeVente/Breadcrumbs/Breadcrumb";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/react";
@@ -9,8 +7,25 @@ import { Select, SelectItem } from "@nextui-org/react";
 import { documents } from "./data";
 import { zones } from "./zoneData";
 import { secteurs } from "./secteurData";
+import ChartProduit from "../../Charts/ChartProduit";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+} from "@nextui-org/modal";
 
 const TableauDesVentes = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [size, setSize] = React.useState("2xl");
+  const sizes = "2xl";
+
+  const handleOpen = (size) => {
+    setSize(size);
+    onOpen();
+  };
   return (
     <>
       <Breadcrumb pageName="Tableau des ventes" />
@@ -54,34 +69,6 @@ const TableauDesVentes = () => {
             </Select>
           </div>
           <div>
-            <Select
-              label="Zones"
-              color="warning"
-              variant="underlined"
-              placeholder="Choisir la zone"
-              selectionMode="multiple"
-              className="max-w-xs text-base font-medium"
-            >
-              {zones.map((zone) => (
-                <SelectItem key={zone.key}>{zone.label}</SelectItem>
-              ))}
-            </Select>
-          </div>
-          <div>
-            <Select
-              label="Secteurs"
-              color="warning"
-              variant="underlined"
-              placeholder="Choisir le secteur"
-              selectionMode="multiple"
-              className="max-w-xs text-base font-medium"
-            >
-              {secteurs.map((secteur) => (
-                <SelectItem key={secteur.key}>{secteur.label}</SelectItem>
-              ))}
-            </Select>
-          </div>
-          <div>
             <p className="text-sm font-medium">Générer</p>
             <Button isIconOnly color="warning" aria-label="click">
               <img
@@ -117,14 +104,23 @@ const TableauDesVentes = () => {
                   <th className="px-3 py-3">Oct</th>
                   <th className="px-3 py-3">Nov</th>
                   <th className="px-3 py-3">Dec</th>
-                  <th className="px-3 py-3">Objeticf du mois</th>
-                  <th className="px-3 py-3">Objeticf de l'année</th>
+                  <th className="px-3 py-3">Objecticf du mois</th>
+                  <th className="px-3 py-3">Objecticf de l'année</th>
                 </tr>
               </thead>
               <tbody className="divide-y text-gray-600">
                 <tr>
                   <td className="whitespace-nowrap px-3 py-4 text-dark dark:text-white">
-                    MC87RT76
+                    <Button
+                      variant="light"
+                      color="warning"
+                      onClick={onOpen}
+                      isIconOnly
+                      onPress={() => handleOpen(size)}
+                      className="px-10 py-3"
+                    >
+                      MC87RT76
+                    </Button>
                   </td>
                   <td className="whitespace-nowrap px-3 py-4 text-green-600">
                     ---
@@ -171,7 +167,16 @@ const TableauDesVentes = () => {
                 </tr>
                 <tr>
                   <td className="whitespace-nowrap px-3 py-4 text-dark dark:text-white">
-                    ZS87RT76
+                    <Button
+                      variant="light"
+                      color="warning"
+                      onClick={onOpen}
+                      isIconOnly
+                      onPress={() => handleOpen(size)}
+                      className="px-10 py-3"
+                    >
+                      ZS87RT76
+                    </Button>
                   </td>
                   <td className="whitespace-nowrap px-3 py-4 text-orange-600">
                     ---
@@ -217,8 +222,17 @@ const TableauDesVentes = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="whitespace-nowrap px-3 py-4 text-dark dark:text-white">
-                    MC87RT76
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <Button
+                      variant="light"
+                      color="warning"
+                      onClick={onOpen}
+                      isIconOnly
+                      onPress={() => handleOpen(size)}
+                      className="px-10 py-3"
+                    >
+                      MC87RT76
+                    </Button>
                   </td>
                   <td className="whitespace-nowrap px-3 py-4 text-green-600">
                     ---
@@ -264,8 +278,17 @@ const TableauDesVentes = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td className="whitespace-nowrap px-3 py-4 text-dark dark:text-white">
-                    ZS87RT76
+                  <td className="whitespace-nowrap px-3 py-4">
+                    <Button
+                      variant="light"
+                      color="warning"
+                      onClick={onOpen}
+                      isIconOnly
+                      onPress={() => handleOpen(size)}
+                      className="px-10 py-3"
+                    >
+                      ZC8ARD34
+                    </Button>
                   </td>
                   <td className="whitespace-nowrap px-3 py-4 text-orange-600">
                     ---
@@ -312,6 +335,34 @@ const TableauDesVentes = () => {
                 </tr>
               </tbody>
             </table>
+            <Modal
+              size={size}
+              isOpen={isOpen}
+              onClose={onClose}
+              isDismissable={false}
+              isKeyboardDismissDisabled={true}
+            >
+              <ModalContent>
+                {(onClose) => (
+                  <>
+                    <ModalHeader className="flex flex-col gap-1">
+                      Statistique du produit
+                    </ModalHeader>
+                    <ModalBody>
+                      <ChartProduit />
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="danger" variant="light" onPress={onClose}>
+                        Fermer
+                      </Button>
+                      <Button color="primary" onPress={onClose}>
+                        Terminer
+                      </Button>
+                    </ModalFooter>
+                  </>
+                )}
+              </ModalContent>
+            </Modal>
           </div>
         </div>
       </div>

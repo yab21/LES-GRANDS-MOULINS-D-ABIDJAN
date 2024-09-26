@@ -75,6 +75,30 @@ const AjouterProspect = () => {
                 placeholder="Entrer l'adresse"
                 className="text-sm font-medium md:text-base"
               />
+              <Input
+                type="text"
+                label="Lien facebook"
+                variant="bordered"
+                color="warning"
+                defaultValue="Veuillez entrer votre lien facebook"
+                className="text-sm font-medium md:text-base"
+              />
+              <Input
+                type="text"
+                label="Lien linkedin"
+                variant="bordered"
+                color="warning"
+                defaultValue="Veuillez entrer votre lien linkedin"
+                className="text-sm font-medium md:text-base"
+              />
+              <Input
+                type="text"
+                label="Lien instagram"
+                variant="bordered"
+                color="warning"
+                defaultValue="Veuillez entrer votre lien instagram"
+                className="text-sm font-medium md:text-base"
+              />
             </div>
             <div className="flex justify-center px-2 py-2">
               <Button

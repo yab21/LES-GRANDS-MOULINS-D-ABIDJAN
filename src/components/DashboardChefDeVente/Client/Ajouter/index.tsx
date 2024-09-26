@@ -3,9 +3,29 @@ import React from "react";
 import Image from "next/image";
 import Breadcrumb from "@/components/DashboardChefDeVente/Breadcrumbs/Breadcrumb";
 import { Button } from "@nextui-org/button";
-import { Textarea } from "@nextui-org/input";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownSection,
+  DropdownItem,
+} from "@nextui-org/dropdown";
 import { Input } from "@nextui-org/react";
-import { Select, SelectItem } from "@nextui-org/react";
+
+const locations = [
+  {
+    key: "new",
+    label: "Abidjan, treichville près du stade",
+  },
+  {
+    key: "copy",
+    label: "Marcory remblais",
+  },
+  {
+    key: "edit",
+    label: "Koumassi grand carrefour",
+  },
+];
 
 const AjouterClient = () => {
   return (
@@ -93,6 +113,55 @@ const AjouterClient = () => {
                 defaultValue="MCT45RH3"
                 className="text-sm font-medium md:text-base"
               />
+              <div className="flex flex-col">
+                <Input
+                  type="text"
+                  label="La localisation"
+                  variant="bordered"
+                  color="warning"
+                  placeholder="Veuillez mettre la localisation"
+                  // defaultValue="Entrer votre nom de famille"
+                  className="text-sm font-medium md:text-base"
+                />
+                <Dropdown>
+                  <DropdownTrigger>
+                    <Button
+                      variant="light"
+                      className="flex items-center justify-start"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="#000"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m21 3l-6.5 18a.55.55 0 0 1-1 0L10 14l-7-3.5a.55.55 0 0 1 0-1z"
+                        />
+                      </svg>{" "}
+                      Voir les localisations
+                    </Button>
+                  </DropdownTrigger>
+                  <DropdownMenu aria-label="Dynamic Actions" items={locations}>
+                    {(location) => (
+                      <DropdownItem
+                        key={location.key}
+                        color={location.key === "delete" ? "danger" : "default"}
+                        className={
+                          location.key === "delete" ? "text-danger" : ""
+                        }
+                      >
+                        {location.label}
+                      </DropdownItem>
+                    )}
+                  </DropdownMenu>
+                </Dropdown>
+              </div>
             </div>
             <div className="flex justify-center px-2 py-2">
               <Button

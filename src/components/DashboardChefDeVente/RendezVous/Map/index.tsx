@@ -20,17 +20,10 @@ const Map = () => {
               <div id="embed-map-display" className="h-full w-full max-w-full">
                 <iframe
                   className="h-full w-full max-w-full border-0"
-                  frameborder="0"
+                  frameBorder="0"
                   src="https://www.google.com/maps/embed/v1/place?q=abidjan+treichville+les+grands+moulins+d'abidjan&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                 ></iframe>
               </div>
-              <a
-                className="google-maps-html"
-                href="https://www.bootstrapskins.com/themes"
-                id="grab-maps-authorization"
-              >
-                premium bootstrap themes
-              </a>
             </div>
             <div className="absolute bottom-1 right-1 z-10 xsm:bottom-4 xsm:right-4">
               <label

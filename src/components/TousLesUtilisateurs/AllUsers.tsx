@@ -15,7 +15,7 @@ const AllUsers: React.FC = () => {
                 height={60}
                 alt=""
               />
-              Tous les comptes du{" "}
+              Tous les comptes des{" "}
               <span className="ml-1 font-bold">GRANDS MOULINS D'ABIDJAN</span>
             </h4>
           </div>
@@ -180,29 +180,6 @@ const AllUsers: React.FC = () => {
                 />
                 <CardFooter className="absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden rounded-large border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
                   <p className="text-tiny text-white/80">Relation client</p>
-                  <Button
-                    className="bg-black/20 text-tiny text-orange-400"
-                    variant="flat"
-                    color="default"
-                    radius="lg"
-                    size="sm"
-                  >
-                    Connexion
-                  </Button>
-                </CardFooter>
-              </Card>
-            </div>
-            <div className="flex items-center">
-              <Card isFooterBlurred radius="lg" className="border-none">
-                <Image
-                  alt="Woman listing to music"
-                  className="object-cover"
-                  height={200}
-                  src="/images/team/avatar.jpg"
-                  width={200}
-                />
-                <CardFooter className="absolute bottom-1 z-10 ml-1 w-[calc(100%_-_8px)] justify-between overflow-hidden rounded-large border-1 border-white/20 py-1 shadow-small before:rounded-xl before:bg-white/10">
-                  <p className="text-tiny text-white/80">Senior commercial</p>
                   <Button
                     className="bg-black/20 text-tiny text-orange-400"
                     variant="flat"

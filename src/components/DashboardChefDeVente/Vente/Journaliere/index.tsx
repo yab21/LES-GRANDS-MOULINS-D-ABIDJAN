@@ -323,7 +323,7 @@ const Journaliere = () => {
                   <>
                     <ModalHeader className="flex flex-col">
                       <h2 className="text-[22px] font-medium text-dark dark:text-white">
-                        Rapport des vente journalière
+                        Rapport des ventes journalières
                       </h2>
                     </ModalHeader>
                     <ModalBody>
